@@ -20,55 +20,55 @@
 
 
 
-// =================== Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
-// M = 1; N = 15 -> 120
-// M = 4; N = 8. -> 30
-
-
-Console.Clear();
-Console.Write("Введите значение M: ");
-int M = int.Parse(Console.ReadLine()!);
-Console.Write("Введите значение N: ");
-int N = int.Parse(Console.ReadLine()!);
-Console.WriteLine(SumRecurs(M,N));
-
-int SumRecurs(int m, int n)
-{
-    if (m == n)
-    {
-        return m;
-    }
-    return (m + SumRecurs(m + 1, n));
-}
-
-
-
-// // ============================ Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
-// // m = 2, n = 3 -> A(m,n) = 9
-// // m = 3, n = 2 -> A(m,n) = 29
+// // =================== Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+// // M = 1; N = 15 -> 120
+// // M = 4; N = 8. -> 30
 
 
 // Console.Clear();
-// Console.Write("Введите неотрицательное число M: ");
+// Console.Write("Введите значение M: ");
 // int M = int.Parse(Console.ReadLine()!);
-// Console.Write("Введите неотрицательное число  N: ");
+// Console.Write("Введите значение N: ");
 // int N = int.Parse(Console.ReadLine()!);
-// Console.WriteLine(AkkRecurs(M, N));
+// Console.WriteLine(SumRecurs(M,N));
 
-// int AkkRecurs(int m, int n)
+// int SumRecurs(int m, int n)
 // {
-//     if (m == 0)
+//     if (m == n)
 //     {
-//         return n + 1;
+//         return m;
 //     }
-//     else if ((m > 0) && (n == 0))
-//     {
-//         return AkkRecurs(m - 1, 1);
-//     }
-//     else if ((m > 0) && (n > 0))
-//     {
-//         return AkkRecurs(m - 1, AkkRecurs(m, n - 1));
-//     }
-//     return n + 1;
+//     return (m + SumRecurs(m + 1, n));
 // }
+
+
+
+// ============================ Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+// m = 2, n = 3 -> A(m,n) = 9
+// m = 3, n = 2 -> A(m,n) = 29
+
+
+Console.Clear();
+Console.Write("Введите неотрицательное число M: ");
+int M = int.Parse(Console.ReadLine()!);
+Console.Write("Введите неотрицательное число  N: ");
+int N = int.Parse(Console.ReadLine()!);
+Console.WriteLine(AkkRecurs(M, N));
+
+int AkkRecurs(int m, int n)
+{
+    if (m == 0)
+    {
+        return n + 1;
+    }
+    else if ((m > 0) && (n == 0))
+    {
+        return AkkRecurs(m - 1, 1);
+    }
+    else if ((m > 0) && (n > 0))
+    {
+        return AkkRecurs(m - 1, AkkRecurs(m, n - 1));
+    }
+    return n + 1;
+}
 
